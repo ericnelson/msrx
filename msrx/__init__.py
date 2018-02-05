@@ -160,6 +160,14 @@ class MSRX(object):
     '''Reset device to initial state'''
     self._send(b'\x1ba')
 
+  def closedev(self):
+    '''close the serial device'''
+    self._dev.close()
+
+  def hico(self):
+    '''set high coercion'''
+    self._send(b'\x1b'b'\x78')
+
   def erase(self, tracks=(True, True, True)):
     '''Erase tracks
 
