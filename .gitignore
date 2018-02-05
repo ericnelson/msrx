@@ -6,3 +6,5 @@ MANIFEST
 *~
 *.pyc
 __pycache__
+# ignore intelliJ stuff
+.idea/
